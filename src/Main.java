@@ -8,7 +8,10 @@ public class Main {
         canil.add(cao);
         Cao cao2 = new Cao();
         cao2.ler();
-        canil.add(cao2);
+        canil.addFim(cao2);
+        Cao cao3 = new Cao();
+        cao3.ler();
+        canil.addFim(cao3);
 
         System.out.println(canil.toString());
         System.out.println("Quantos elementos tem?"+canil.size());
@@ -17,5 +20,9 @@ public class Main {
         }else{
             System.out.println("Cheia");
         }
+        canil.exibir();
+        canil.remover();
+        System.out.println("REMOVER");
+        canil.exibir();
     }
 }

@@ -18,12 +18,12 @@ public class Cao {
         System.out.println("Digite nome");
         Scanner tc = new Scanner(System.in);
         nome=tc.next();
-        System.out.println("Digite raca");
-        raca=tc.next();
+       // System.out.println("Digite raca");
+    ///     raca=tc.next();
     }
     public void exibir(){
         System.out.println("Nome:"+nome);
-        System.out.println("Raca:"+raca);
+      //  System.out.println("Raca:"+raca);
 
     }
 
