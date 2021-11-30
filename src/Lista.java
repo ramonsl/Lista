@@ -76,7 +76,6 @@ public class Lista {
        }
 
     }
-
     public boolean remover(){
         if (!isEmpty()){
          Cao p =this.primeiro;
@@ -89,5 +88,43 @@ public class Lista {
             return false;
         }
     }
+    public boolean remover(int x){
+        if (x == 0){
+           return this.remover();
+        }else if(x>=tam){
+            return false;
+        } else if (x==tam-1){
+         return this.removerFim();
+        }else{
+            int cout=0;
+            Cao elemento=this.primeiro;
+            Cao anterior= this.primeiro;
+            while (x>cout){
+                cout++;
+                anterior=elemento;
+                elemento=elemento.proximo;
+            }
+            anterior.proximo=elemento.proximo;
+            this.tam--;
+            return true;
+        }
 
+    }
+    public boolean removerFim(){
+        if(this.primeiro==null){
+            System.out.println("Lista vazia");
+            return false;
+        }else{
+        Cao aux=primeiro;
+        Cao penultimo=primeiro;
+        while (aux.proximo!=null){
+            penultimo=aux;
+            aux=aux.proximo;
+        }
+        penultimo.proximo=null;
+        this.ultimo=penultimo;
+        this.tam--;
+        return true;
+    }
+    }
 }
