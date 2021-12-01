@@ -19,7 +19,8 @@ public class Main {
         }
 
         canil.exibir();
-        canil.remover(2);
+        Cao c= new Cao("pirata");
+        canil.remover(c);
         canil.exibir();
     }
 }

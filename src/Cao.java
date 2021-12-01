@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Cao {
@@ -24,7 +25,21 @@ public class Cao {
     public void exibir(){
         System.out.println("Nome:"+nome);
       //  System.out.println("Raca:"+raca);
-
     }
+
+    public Cao() {
+    }
+    public Cao(String nome) {
+        this.nome = nome;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cao cao = (Cao) o;
+        return Objects.equals(nome, cao.nome);
+    }
+
 
 }
